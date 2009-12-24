@@ -1,0 +1,26 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:zojax="http://namespaces.zope.org/zojax"
+   xmlns:browser="http://namespaces.zope.org/browser"
+   i18n_domain="zojax.portlets">
+
+  <zojax:portlet
+     name="portlet.livesearch"
+     title="Live Search"
+     class=".portlet.LiveSearchPortlet"
+     template="portlet.pt" />
+
+  <zojax:resourceinclude
+     name="zojax.portlets.livesearch"
+     type="javascript"
+     library="zojax.portlets.livesearch"
+     require="extjs"
+     file="livesearch.js" />
+
+  <browser:page
+     name="search.html"
+     for=".interfaces.ILiveSearchPortlet"
+     class=".search.Search"
+     permission="zope.Public" />
+
+</configure>

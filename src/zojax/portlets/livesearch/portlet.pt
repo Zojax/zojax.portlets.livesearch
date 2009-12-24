@@ -1,0 +1,18 @@
+<div class="z-portlet" i18n:domain="zojax.portlets.livesearch">
+  <div class="z-portlet-header" i18n:translate="">
+    Live Search
+  </div>
+  <div class="z-portlet-body">
+    <div class="z-portlet-item">
+      <form name="z-portlet-livesearch"
+            tal:attributes="action string:${view/portal/@@absolute_url}/search.html">
+	<input id="z-portlet-livesearch-field"
+	       type="text" size="15" title="Search Site"
+	       i18n:attributes="title"
+	       tal:attributes="value view/value; name view/fti" />
+	<input style="font-size: 90%" class="z-portlet-searchButton"
+               type="submit" value="Search" i18n:attributes="value" />
+      </form>
+    </div>
+  </div>
+</div>
